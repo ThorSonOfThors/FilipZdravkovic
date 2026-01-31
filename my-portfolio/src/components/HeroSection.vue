@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 
 import profileImg from '../assets/profile.jpg'
-import altImg from '../assets/pfp.jpg'
+import altImg from '../assets/Pfp.jpg'
 
 const flipped = ref(false)
 
