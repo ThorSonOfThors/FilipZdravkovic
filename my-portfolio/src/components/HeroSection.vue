@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+import profileImg from '../assets/profile.jpg'
+import altImg from '../assets/pfp.jpg'
+
 const flipped = ref(false)
 
 const downloadCV = () => {
@@ -28,7 +31,6 @@ const flipImage = () => {
           with a strong foundation in computer science.
         </p>
 
-
         <button @click="downloadCV">Download CV</button>
       </div>
 
@@ -41,10 +43,20 @@ const flipImage = () => {
           aria-label="Flip profile picture"
         >
           <div class="coin-face front">
-            <img src="../assets/profile.jpg" alt="Filip Zdravković" />
+            <img
+              :src="profileImg"
+              alt="Filip Zdravković"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
           <div class="coin-face back">
-            <img src="../assets/pfp.jpg" alt="Filip Zdravković alternate" />
+            <img
+              :src="altImg"
+              alt="Filip Zdravković alternate"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
       </div>
