@@ -1,0 +1,45 @@
+:root {
+  --text: #111827;
+  --muted: #6b7280;
+  --bg: #ffffff;
+  --accent: #111827;
+  --max-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding: 4rem 2rem;
+  }
+}
+
+body {
+  margin: 0;
+  padding-top: 55px; /* navbar height */
+}
+section {
+  scroll-margin-top: 65px;
+}
+
+
