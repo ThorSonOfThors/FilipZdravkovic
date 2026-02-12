@@ -27,7 +27,12 @@ const projects = [
   {
     name: 'Tampermonkey Script for a Mini Youtube browser extension',
     url: 'https://github.com/ThorSonOfThors/Mini-Youtube-Tampermonkey-Script.git'
+  },
+  {
+    name: 'SEO online application using NUXT',
+    url: 'https://tools4renovation.vercel.app/'
   }
+  
 ]
 </script>
 
