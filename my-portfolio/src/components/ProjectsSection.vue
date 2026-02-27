@@ -1,5 +1,10 @@
 <script setup lang="ts">
 const projects = [
+  
+  {
+    name: 'Zero-cost comunity website with auth, admin-managment and user friendly UI',
+    url: 'https://davincy.vercel.app/'
+  },
   {
     name: 'E-Commerce online application ',
     url: 'https://github.com/ThorSonOfThors/Batik-Shop.git'
