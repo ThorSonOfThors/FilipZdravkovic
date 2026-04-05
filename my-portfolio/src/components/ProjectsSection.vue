@@ -9,6 +9,12 @@ const projects = [
     name: 'E-Commerce online application ',
     url: 'https://github.com/ThorSonOfThors/Batik-Shop.git'
   },
+
+  {
+    name: 'Online Application designed for pixel-art with SEO operations and advanced 2D grid tools ',
+    url: 'https://artofpixels.vercel.app/'
+  },
+
   {
     name: 'Sales website with automated emails',
     url: 'https://github.com/ThorSonOfThors/TintorSajt.git'
