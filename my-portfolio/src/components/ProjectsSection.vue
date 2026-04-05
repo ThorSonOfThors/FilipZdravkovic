@@ -15,6 +15,11 @@ const projects = [
     url: 'https://artofpixels.vercel.app/'
   },
 
+   {
+    name: 'SEO specialized website with reactive user-input results ',
+    url: 'https://tools4renovation.vercel.app/'
+  },
+
   {
     name: 'Sales website with automated emails',
     url: 'https://github.com/ThorSonOfThors/TintorSajt.git'
