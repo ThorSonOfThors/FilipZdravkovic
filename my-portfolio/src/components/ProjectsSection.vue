@@ -21,6 +21,11 @@ const projects = [
   },
 
   {
+    name: 'Online application with GSAP scrolling effects and backend event manager',
+    url: 'https://akatsuki-gamma.vercel.app/home'
+  },
+
+  {
     name: 'Sales website with automated emails',
     url: 'https://github.com/ThorSonOfThors/TintorSajt.git'
   },
