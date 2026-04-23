@@ -55,50 +55,114 @@ const projects = [
   }
   
 ]
+
+const isGithub = (url: string) => url.includes('github.com')
 </script>
 
 <template>
   <section class="page">
     <h2>Projects</h2>
 
-    <ul class="projects">
-      <li v-for="project in projects" :key="project.name">
-        <a
-          :href="project.url"
-          target="_blank"
-          rel="noopener"
-        >
-          {{ project.name }}
-        </a>
-      </li>
-    </ul>
+    <div class="projects">
+      <div
+        v-for="project in projects"
+        :key="project.name"
+        class="project-card"
+      >
+
+        <!-- ✅ GITHUB → IMAGE PREVIEW -->
+        <div v-if="isGithub(project.url)">
+          <div class="preview-wrapper">
+            <img src="/git.jpeg" alt="GitHub project" />
+
+            <a
+              :href="project.url"
+              target="_blank"
+              rel="noopener"
+              class="overlay"
+            ></a>
+          </div>
+
+          <p class="title">{{ project.name }}</p>
+        </div>
+
+        <!-- ✅ WEBSITE → IFRAME PREVIEW -->
+        <div v-else>
+          <div class="preview-wrapper">
+            <iframe :src="project.url" loading="lazy"></iframe>
+
+            <a
+              :href="project.url"
+              target="_blank"
+              rel="noopener"
+              class="overlay"
+            ></a>
+          </div>
+
+          <p class="title">{{ project.name }}</p>
+        </div>
+
+      </div>
+    </div>
+
     <p>more projects coming up...</p>
   </section>
 </template>
 
 <style scoped>
 .projects {
-  list-style: none;
-  padding: 0;
-  margin: 1.5rem 0 0;
   display: grid;
-  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
-.projects a {
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Preview */
+.preview-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #000;
+}
+
+.preview-wrapper iframe {
+  width: 1200px;
+  height: 800px;
+  border: none;
+  transform: scale(0.25);
+  transform-origin: top left;
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.title {
+  font-size: 0.9rem;
+}
+
+/* GitHub fallback style */
+.github-item {
   display: block;
-  padding: 0.75rem 1rem;
-
-  border-radius: 6px;
+  padding: 1rem;
+  border-radius: 8px;
   text-decoration: none;
-
-  color: var(--text);
-  background: rgba(0, 0, 0, 0.03);
-
-  transition: background 0.15s ease;
+  background: rgba(0,0,0,0.05);
+  transition: background 0.2s;
 }
 
-.projects a:hover {
-  background: rgba(0, 0, 0, 0.07);
+.github-item:hover {
+  background: rgba(0,0,0,0.1);
 }
 </style>
