@@ -10,6 +10,11 @@ const projects = [
     url: 'https://github.com/ThorSonOfThors/Batik-Shop.git'
   },
 
+   {
+    name: 'Secret Message App SHA 256 encryption ',
+    url: 'https://securemessageapp.vercel.app/'
+  },
+
   {
     name: 'Online Application designed for pixel-art with SEO operations and advanced 2D grid tools ',
     url: 'https://artofpixels.vercel.app/'
